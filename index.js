@@ -2,7 +2,7 @@ import {Cliente} from "./Cliente.js"
 import {ContaCorrente} from "./ContaCorrente.js"
 
 const cliente1 = new Cliente();
-cliente1.nome = "Marcos";
+cliente1.nome = "Ricardo";
 cliente1.cpf = 11223344556;
 
 const cliente2 = new Cliente();
@@ -20,7 +20,9 @@ ContaCorrenteRicardo.cliente = cliente1;
 ContaCorrenteRicardo.depositar(500);
 
 const conta2 = new ContaCorrente();
-conta2.cliente = cliente2;
+conta2.cliente = new Cliente();
+conta2.cliente.nome = "Alice";
+conta2.cliente.cpf = 85425632514;
 conta2.agencia = 102;
 
 ContaCorrenteRicardo.transferir(200, conta2);
